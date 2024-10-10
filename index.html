@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DrivenEats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+  <!-- topo  -->
+  <div class="topo">
+    <h1>DrivenEats</h1>
+    <p>Sua comida em 6 minutos</p>
+  </div>
+  <div id="overlay" class="overlay">
+    <div class="confirmacao-pedido">
+      <h3>Confirme seu pedido</h3>
+      <p id="pedido-detalhes"></p>
+      <p id="total-preco"></p>
+      <a id="tudo-certo" href="https://wa.me/5531999999999" target="_blank">Tudo certo, pode pedir!</a>
+      <button onclick="cancelarPedido()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- categorias -->
+  <div class="categoria">
+    <h2>Primeiro, seu prato</h2>
+    <div class="itens" id="pratos">
+      <div class="item" onclick="selecionarItem(this, 'prato')">
+        <img src="projeto__driven-eats__imagens/pf_frango.jpg" alt="Frango Yin Yang">
+        <p class="nome">Frango Yin Yang</p>
+        <p class="descricao">Salada, feijão, arroz e frango</p>
+        <p class="preco">14.90</p>
+      </div>
+
+      <div class="item" onclick="selecionarItem(this, 'prato')">
+        <img src="projeto__driven-eats__imagens/pf_calabresa.png" alt="Calabresa">
+        <p class="nome">Calabresa</p>
+        <p class="descricao">Arroz, feijão, fritas e calabresa</p>
+        <p class="preco">19.90</p>
+      </div>
+      <div class="item" onclick="selecionarItem(this, 'prato')">
+        <img src="projeto__driven-eats__imagens/pf_carne.jpg" alt="Carne com acompanhamentos">
+        <p class="nome">Carne</p>
+        <p class="descricao">Arroz, feijão, fritas, ovo, salada e carne</p>
+        <p class="preco">22.90</p>
+      </div>
+
+    </div>
+  </div>
+      <!--   bebidas  -->
+  <div class="categoria">
+    <h2>Agora, sua bebida</h2>
+    <div class="itens" id="bebidas">
+      <div class="item" onclick="selecionarItem(this, 'bebida')">
+        <img src="projeto__driven-eats__imagens/coca.png" alt="Coquinha Gelada">
+        <p class="nome">Coquinha Gelada</p>
+        <p class="descricao">Lata 270ml</p>
+        <p class="preco">4.90</p>
+      </div>
+
+      <div class="item" onclick="selecionarItem(this, 'bebida')">
+        <img src="projeto__driven-eats__imagens/suco.png" alt="Sucolaranja">
+        <p class="nome">Suco de Laranja</p>
+        <p class="descricao">Copo</p>
+        <p class="preco">3.90</p>
+      </div>
+
+      <div class="item" onclick="selecionarItem(this, 'bebida')">
+        <img src="projeto__driven-eats__imagens/fanta.png" alt="Fanta">
+        <p class="nome">Fanta Laranja</p>
+        <p class="descricao">Lata 350ml</p>
+        <p class="preco">3.90</p>
+      </div>
+
+    </div>
+  </div>
+      <!--   sobremesas  -->
+  <div class="categoria">
+    <h2>Por fim, sua sobremesa</h2>
+    <div class="itens" id="sobremesas">
+      <div class="item" onclick="selecionarItem(this, 'sobremesa')">
+        <img src="projeto__driven-eats__imagens/pudim.jpg" alt="Pudim">
+        <p class="nome">Pudim</p>
+        <p class="descricao">Apenas pudim</p>
+        <p class="preco">7.90</p>
+      </div>
+
+      <div class="item" onclick="selecionarItem(this, 'sobremesa')">
+        <img src="projeto__driven-eats__imagens/brownie.jpg" alt="brownie">
+        <p class="nome">Brownie</p>
+        <p class="descricao">Apenas brownie</p>
+        <p class="preco">10.90</p>
+      </div>
+      <div class="item" onclick="selecionarItem(this, 'sobremesa')">
+        <img src="projeto__driven-eats__imagens/mouse.jpg" alt="mousse">
+        <p class="nome">Mousse</p>
+        <p class="descricao">Apenas mousse</p>
+        <p class="preco">5.90</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- botao fechar pedido -->
+  <button id="fechar-pedido" class="desabilitado" disabled>Fechar Pedido</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
