@@ -8,7 +8,6 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f5f5f5;
-  padding-bottom: 100px;
 }
 
 .topo {
@@ -18,15 +17,15 @@ body {
   background-color: #D32F2F;
   color: white;
   text-align: left;
-  padding: 20px;
   font-family: 'Righteous', cursive;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
 
+
 .categoria {
   margin-top: 100px;
-  padding: 20px;
+  padding: 0;
 }
 
 .categoria h2 {
@@ -40,33 +39,36 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  z-index: 10000; 
 }
+
 .confirmacao-pedido a {
-  display: block;
+  display: inline-block;
   margin-top: 15px;
-  padding: 10px;
-  background-color: #32CD32;
-  color: white;
+  padding: 15px;
+  background-color: white; 
+  color: #32CD32; 
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px; 
+  text-align: center;
+  width: auto;
 }
 .confirmacao-pedido {
-  background-color: white;
+  background-color: #50D074; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   max-width: 400px;
   width: 100%; 
-  z-index: 10001;
+  color: white; 
 }
 
-
 .confirmacao-pedido button {
+  display: flex;
   margin-top: 10px;
   background-color: #D32F2F;
   color: white;
@@ -74,7 +76,9 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
+
 .confirmacao-pedido button:hover {
   background-color: #b71c1c;
 }
@@ -83,21 +87,17 @@ body {
   display: flex;
   overflow-x: scroll;
 }
-
-
 .item.selecionado {
   border: 2px solid #32CD32;
   background-color: #e6ffe6;
 }
 
-
 .item {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px; 
+  padding: 5px; 
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -129,6 +129,7 @@ body {
 }
 
 #fechar-pedido {
+  font: Roboto;
   transition: background-color 0.3s;
   position: fixed;
   bottom: 0;
@@ -138,28 +139,32 @@ body {
   background-color: #32CD32;
   color: white;
   border: none;
-  font-size: 18px;
-  font-weight: bold;
-  z-index: 999;
-
+  font-size: 10px;
+    z-index: 999;
 }
 
 #fechar-pedido.desabilitado {
-  background-color: #50D074;
+  background-color: gray;
+  color: white;
   cursor: not-allowed;
-
+  display: block;
+  padding: 15px;
+  border-radius: 50px; 
+  font-size: 16px; 
+  text-align: center;
+  white-space: pre-line;
 }
 
 #fechar-pedido.habilitado {
   background-color: #32CD32;
+  color: white;
+  display: block;
+  padding: 15px;
+  border-radius: 50px; 
+  font-size: 16px;
   cursor: pointer;
+  text-align: center;
 }
-
-@media screen and (max-width: 414px) {
-
-
-  .item {
-    width: 100%; 
-  }
+#total-preco {
+  font-weight: bold;
 }
-
