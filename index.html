@@ -105,8 +105,18 @@
       </div>
     </div>
   </div>
-    <!-- botao fechar pedido -->
-    <button id="fechar-pedido" class="desabilitado" disabled>Fechar Pedido</button>
+
+  <div id="overlay" style="display: none;">
+    <div id="pedido-detalhes"></div>
+    <div id="total-preco"></div>
+    <button onclick="cancelarPedido()">Cancelar</button>
+  </div>
+  
+  <!-- Botão para fechar o pedido -->
+   <br>
+   <br>
+   <br>
+  <button id="fechar-pedido" class="desabilitado" disabled>Selecione os 3 itens para fechar o pedido</button>
   <script src="index.js"></script>
 </body>
 </html>
